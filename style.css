@@ -20,18 +20,26 @@ body {
     color: #fff;
     background-color: #1E1E1E;
     box-sizing: border-box;
-    padding: 0 5%;
     line-height: 1.5em;
-    position: relative;
     
 }
 
 
+
 /* STYLES */
+
+
+/* .hero_container {
+    
+} */
+
+.container {
+    padding: 0 5%;
+    
+}
 
 .header {
     box-sizing: border-box;
-    top: 0;
     left: 0;
     position: absolute;
     width: 100%;
@@ -52,7 +60,7 @@ body {
     background-color: #fff; #575757 */
     font-weight: bold;
     font-size: 0.9em;
-
+    
 }
 
 
@@ -60,18 +68,24 @@ body {
 
 .hero {
     height: 80vh;
-    width: 100vw;
-    left: calc(100vw -5%);
+    width: 100%;
+    top: 0;
+    left: 0;
+    top: 0;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 5%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    /*
+    flex-direction: column;
+     */
     overflow: hidden;
     background-image: url(hero_image.jpg);
     background-size: cover;
-
-
+    
+    
 }
 
 .overlay {
@@ -85,12 +99,21 @@ body {
 }
 
 .hero--text {
-    font-size: 3em;
-    z-index: 2;
+    font-size: 4em;
+    position: relative;
+    line-height: 1.2em;
+    z-index: 2; 
+    width: 40%;
+    text-align: center;
+    /*
+    box-sizing: border-box;
+    right: 0;
+    */
 }
 
 .hero--subtext {
     z-index: 2;
+    position: relative;
     font-size: 1.5em;
     margin-top: 8px;
 }
@@ -176,6 +199,67 @@ body {
     margin-top: 3em;
     display: flex;
     flex-direction: column;
+}
+
+/* input {
+    background: transparent;
+    border: none;
+    /* width: 100%; 
+    color: #fff;
+    font-size: .8em;
+    line-height: 30px;
+    padding: 0px 10px 10px;
+    margin-top: 10px;
+    border-bottom: 1px #575757 solid;
+}
+
+button .form--submit {
+    background: #fff;
+} */
+
+
+
+input::placeholder,
+textarea::placeholder {
+    font-style: italic;
+    color: #fff; 
+    padding-left: 0; 
+}
+
+
+input:placeholder-shown,
+textarea:placeholder-shown {
+    padding-left: 0; 
+}
+
+input:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+    padding-left: 10px; 
+}
+
+input, textarea {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: .8em;
+    line-height: 30px;
+    padding: 0px 10px 10px 10px; 
+    margin-top: 10px;
+    border-bottom: 1px #575757 solid;
+}
+
+
+button.form--submit {
+    background-color: #fff;
+    color: #000; 
+    text-align: left;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button.form--submit:hover {
+    background-color: #f0f0f0;
 }
 
 
